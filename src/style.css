@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root{
+  --bg:#060506;
+  --gold:#d6b86b;
+  --muted:#bba86a;
+  --text:#eae3c3;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body,#root{height:100%}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+
+
+.section {
+  min-height: 100vh;
+  background: transparent;
+  position: relative;
+  z-index: 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:auto;
+}
+
+
+/* Section content centered */
+.section {
+    background: transparent;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:5rem 2rem;
+  z-index: 0;
+  position:relative;
+  pointer-events: auto;
+}
+
+.sections-wrapper {
+  position: relative;
+  z-index: 20;          /* puts it above Sphere canvas */
+  pointer-events: auto; /* allows clicking */
+}
+
+.h1 {
+  color:var(--text);
+  font-weight:300;
+  letter-spacing:0.08em;
+  line-height:1.02;
+}
+
+.lead {
+  margin-top:18px;
+  max-width:900px;
+  color: rgba(234,227,195,0.95);
+  opacity:0.96;
+  font-size:1.05rem;
+  line-height:1.6;
+}
+
+/* small subtle gold accent class */
+.gold {
+  color: var(--gold);
+}
+
+/* Floating nav */
+.top-nav {
+  position:fixed;
+  left:24px;
+  top:18px;
+  z-index:60;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.logo {
+  font-weight:600;
+  color:var(--gold);
+  letter-spacing:0.12em;
+}
+
+/* testinimial */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  position: relative;
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua; */
+}
+
+.card {
+  position: absolute;
+  width: 320px;
+  height: 250px;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: rgba(255, 215, 0, 0.09);
+  backdrop-filter: blur(12px);
+  border: 5px solid rgba(255, 215, 0, 0.15);
+  color: white;
+  opacity: 0.4;
+  transform: scale(0.75);
+  transition: all 0.6s ease;
+  text-align: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ gap: 30px;
+}
+
+/* Center / Active Card */
+.card.active {
+  opacity: 1;
+  transform: scale(1.15);
+  z-index: 3;
+  background: rgba(255, 215, 0, 0.15);
+  box-shadow: 0 0 25px rgba(255, 205, 50, 0.4);
+}
+
+/* Left Card */
+.card.left {
+  transform: translateX(-250px) scale(0.9);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+/* Right Card */
+.card.right {
+  transform: translateX(250px) scale(0.9);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  font-size: 3rem;
+  color: gold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  color: white;
+}
+
+.nav-btn.left { left: 10%; }
+.nav-btn.right { right: 10%; }
+
+.gold-center {
+  color: gold;
+  text-align: center;
+}
+
+/* //cards */
+
+/* .card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+  perspective: 1200px;
+}
+
+.card3d {
+  width: 350px;
+  height: 400px;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.95);
+  border-radius: 16px;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow:
+    0px 15px 40px rgba(0, 0, 0, 0.45),
+    0px 0px 20px rgba(255, 215, 0, 0.35);
+}
+
+.card-inner img {
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.4);
+}
+
+.card-inner h3 {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.card-desc {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 0 1rem;
+  opacity: 0.9;
+  color: #ccc;
+} */
+
+
+
+/* cardssectionsstyle */
+.card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+  perspective: 1200px;
+}
+
+.card3d {
+  width: 300px;
+  height: 400px;
+  cursor: pointer;
+  perspective: 1000px;
+  transition: transform 0.4s ease;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.9);
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 
+    0px 15px 40px rgba(0, 0, 0, 0.45),
+    0px 0px 15px rgba(255, 215, 0, 0.35);
+
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card3d:hover .card-inner {
+  transform: rotateY(12deg) rotateX(12deg) scale(1.05);
+  box-shadow:
+    0px 20px 50px rgba(0, 0, 0, 0.55),
+    0px 0px 25px rgba(255, 215, 0, 0.6);
+}
+
+.card-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.card3d:hover img {
+  filter: brightness(1.15);
+}
+
+.card-inner h3 {
+  margin-top: 0.8rem;
+  font-size: 1.6rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.card-desc {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0 1rem;
+  opacity: 0.9;
+  color: #ccc;
+}
