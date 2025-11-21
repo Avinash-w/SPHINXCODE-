@@ -77,11 +77,6 @@ useEffect(() => {
           your behaviors, beliefs, and traits that swing from positive to
           negative attributes.
         </p>
-        <img
-          src="/path/to/your/sphinx-welcome-image.jpg"
-          alt="Sphinx Code Welcome"
-          style={{ maxWidth: "60%", marginTop: "2rem" }}
-        />
       </section>
       
 
@@ -139,17 +134,17 @@ useEffect(() => {
       {
         title: "Archetypal Blueprint",
         paragraph: "Get your Free Blueprint and discover your Archetypal subconscious structure that is your psyche.",
-        img: "src/assets/img_1.png"
+        img: "/assets/img_1.png"
       },
       {
         title: "Global Transits",
         paragraph: "Follow each day’s archetypal flow, and align your special events with proper archetypal influence.",
-        img: "src/assets/img_2.png"
+        img: "/assets/img_2.png"
       },
       {
         title: "Get A Reading",
         paragraph: "A Wisdom Keeper reading provides greater depth to understand your Archetypal Blueprint, and master yourself.",
-        img: "src/assets/img_3.png"
+        img: "/assets/img_3.png"
       }
     ].map((card, index) => (
       <div className="card3d" key={index}>
