@@ -60,7 +60,8 @@ useEffect(() => {
 
   return (
     <>
-    <div className="sections-wrapper">
+    <div className="sections-wrapper" id="sec5" >
+
       <section id="welcome" className="section">
         <h1 className="h1">
           WELCOME TO <span className="gold">SPHINX CODE</span>
@@ -79,33 +80,6 @@ useEffect(() => {
         </p>
       </section>
       
-
-      <section id="video-intro" className="section">
-        <h2 className="h1">VIDEO INTRODUCTION</h2>
-        <p className="lead">
-          Watch a cinematic introduction to the Sphinx Code — a crafted blend of
-          volumetric fog, drifting particles, and slow-energy motion that helps
-          orient you to your subconscious architecture.
-        </p>
-        <div
-          style={{
-            marginTop: "2rem",
-            width: "80%",
-            maxWidth: "800px",
-          }}
-        >
-          <iframe
-            src="https://vimeo.com/756387968?fl=pl&fe=sh"
-            width="100%"
-            height="450"
-            style={{ border: "none" }}
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            title="Sphinx Code Introduction Video"
-          ></iframe>
-        </div>
-      </section>
-
       <section id="oracles" className="section">
         <h2 className="h1">THE SPHINX CODE ORACLES</h2>
         <p className="lead">
@@ -113,7 +87,7 @@ useEffect(() => {
           give readings to your clients.
         </p>
         <img
-          src="/path/to/oracles-image.jpg"
+          src="public/assets/image.png"
           alt="Sphinx Oracles"
           style={{ maxWidth: "50%", marginTop: "2rem" }}
         />
@@ -122,7 +96,7 @@ useEffect(() => {
         </p>
       </section>
 
-        <section id="archetypes" className="section" style={{ position: "relative", zIndex: 999 }}>
+      <section id="archetypes" className="section" style={{ position: "relative", zIndex: 999 }}>
   <h2 className="h1 gold">THE ARCHETYPES</h2>
 
   <p className="lead">
@@ -156,10 +130,7 @@ useEffect(() => {
       </div>
     ))}
   </div>
-</section>
-
-
-
+      </section>
       
 
 
@@ -167,7 +138,7 @@ useEffect(() => {
         <Testimonials/>
       {/* </section> */}
 
-      <section id="readings" className="section">
+      {/* <section id="readings" className="section">
         <h2 className="h1">GET SPHINX SCROLLS</h2>
         <p className="lead">
           Sign up for our free newsletter and unlock your archetypal blueprint.
@@ -187,8 +158,42 @@ useEffect(() => {
         >
           JOIN NEWSLETTER
         </button>
-      </section>
+      </section> */}
       </div>
+
+
+
+      
     </>
   );
 }
+
+const sectionStyle = {
+  height: "100vh",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "start",
+  alignItems: "left",
+  textAlign: "left",
+  padding: "8rem",
+  color: "white",
+  fontFamily: "'Poppins', sans-serif",
+  textShadow: "0 0 20px rgba(0,0,0,0.25)",
+};
+
+const h1Style = {
+  fontSize: "clamp(42px, 6vw, 92px)",
+  fontWeight: 300,
+  letterSpacing: "0.12em",
+  margin: 0,
+  color: "#ffffff",
+};
+
+const pStyle = {
+  marginTop: 18,
+  maxWidth: 900,
+  opacity: 0.92,
+  fontSize: "clamp(15px, 1.15vw, 20px)",
+  lineHeight: 1.6,
+  color: "rgba(255,255,255,0.92)",
+};
