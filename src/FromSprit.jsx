@@ -7,6 +7,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+import Navbar from "./components/Navbar";
+import PersonalGuidance from "./components/PersonalGuidance";
+import CosmicCards from "./components/CosmicCards";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -583,98 +586,55 @@ export default function FromSprit() {
       <div ref={mountRef} style={{ position: "fixed", inset: 0, zIndex: -1 }} />
 
       {/* Floating Menu */}
-      <nav
-        aria-label="Sections"
-        style={{
-          position: "fixed",
-          right: 22,
-          top: 22,
-          zIndex: 90,
-          background: "rgba(10,10,14,0.45)",
-          backdropFilter: "blur(8px)",
-          borderRadius: 14,
-          padding: 8,
-          boxShadow: "0 6px 30px rgba(0,0,0,0.5)",
-          border: "1px solid rgba(255,255,255,0.04)",
-        }}
-      >
-        <ul style={{ listStyle: "none", margin: 0, padding: 6, display: "flex", flexDirection: "column", gap: 8 }}>
-          <li>
-            <button onClick={() => handleNavClick("sec1")} style={menuBtn} aria-current={active === "sec1"}>
-              <span style={dot(active === "sec1")} />
-              <span style={{ fontSize: 13, letterSpacing: "0.08em" }}>Spirit</span>
-            </button>
-          </li>
+      <Navbar />
+      <section className="hero-section">
+      {/* Background Video */}
+      <video className="hero-video" autoPlay loop muted playsInline>
+        <source src="/banner.mp4" type="video/mp4" />
+      </video>
 
-          <li>
-            <button onClick={() => handleNavClick("sec2")} style={menuBtn} aria-current={active === "sec2"}>
-              <span style={dot(active === "sec2")} />
-              <span style={{ fontSize: 13, letterSpacing: "0.08em" }}>Awakening</span>
-            </button>
-          </li>
+      {/* Overlay */}
+      <div className="hero-overlay">
+        <h1 className="hero-title">Awaken Your Inner Consciousness</h1>
+        <p className="hero-subtitle">
+          Experience Spiritual Alignment, Healing & Universal Energy
+        </p>
 
-          <li>
-            <button onClick={() => handleNavClick("sec3")} style={menuBtn} aria-current={active === "sec3"}>
-              <span style={dot(active === "sec3")} />
-              <span style={{ fontSize: 13, letterSpacing: "0.08em" }}>Human</span>
-            </button>
-          </li>
+        <div className="hero-buttons">
+          <button className="hero-btn">Book a Healing Session</button>
+          <button className="hero-btn">Explore Courses</button>
+          <button className="hero-btn">Join Membership</button>
+        </div>
+      </div>
+    </section>
 
-          <li>
-            <button
-              onClick={() => {
-                if (!enableMic) enableMicHandler();
-                else {
-                  audioAnalyserRef.current = null;
-                  setEnableMic(false);
-                }
-              }}
-              title="Toggle Microphone (sound-reactive)"
-              style={{
-                marginTop: 6,
-                padding: "6px 10px",
-                borderRadius: 8,
-                border: "1px solid rgba(255,255,255,0.04)",
-                background: enableMic ? "rgba(211, 193, 130, 0.12)" : "transparent", // subtle gold tint
-                color: "rgba(255, 254, 240, 0.9)",
-                cursor: "pointer",
-                fontSize: 12,
-              }}
-            >
-              {enableMic ? "Mic ON" : "Enable Mic"}
-            </button>
-          </li>
-        </ul>
-      </nav>
+     <PersonalGuidance />
 
       {/* Titles + sections */}
       <div style={{ position: "scroll", zIndex: 50 }}>
         <section id="sec1" style={sectionStyle}>
-          <h1 style={h1Style}>FROM SPIRIT</h1>
-          <p style={pStyle}>
-            The journey begins at the source — a pulse of primordial energy forming in the vast cosmic sea. As the viewer scrolls forward, swirling particles gather, drifting like living stardust around a glowing core. Faint waves of light ripple outward, shaping the space as if creation itself is breathing.
-
-Nebula fog curls around the frame, and currents of luminous energy twist in slow spirals, guiding the viewer deeper into the origin point. Everything feels alive — shifting, expanding, unfolding — as the raw essence of the universe reveals its first spark. This is the birthplace of motion, color, and form. A moment suspended between nothingness and creation.
-          </p>
+          <CosmicCards />
         </section>
 
         <section id="sec2" style={sectionStyle}>
-          <h1 style={h1Style}>DESCENT</h1>
+          <h1 className="guidance-main-title">AS SEEN IN</h1>
           <p style={pStyle}>
-            As the viewer scrolls, the energy falls inward, slipping through layers of shifting light, nebula fog, and spiraling particles. The descent is not a fall, but a transition — a passage into a deeper strata of the cosmic current. Colors stretch, shapes distort, and the tunnel pulls you closer to its unseen core.
+            I help people achieve the unbelievable through direct experiences so they know Nature’s Intelligence, themselves, and open to the wonder of life.
 
-    Every frame feels like crossing a new boundary: drifting past ancient currents, sliding through glowing dust, sinking toward the heart of a primordial force waiting in the dark. The deeper you descend, the more the universe unfolds — revealing patterns, runes, and echoes hidden beneath the surface of creation.
+I guide individuals to manifest the extraordinary persons they are designed to be through a personalized journey of consciousness, frequencies, energetics, plants, and proprietary methods to liberate their highest performance with joy, love, & abundance!
           </p>
         </section>
 
         <section id="sec3" style={sectionStyle}>
-          <h1 style={h1Style}>BECOMING HUMAN</h1>
+          <h1 className="guidance-main-title" >BECOMING HUMAN</h1>
           <p style={pStyle}>
-            As the scroll continues, the swirling cosmic energy begins to take form. Light condenses into structure — shifting patterns, flowing geometry, and faint outlines emerging from the luminous haze. The primordial spirit stretches through layers of matter, learning the weight of shape, the rhythm of breath, the pull of gravity.
-
-Particles gather around a forming silhouette, vibrating with life as consciousness anchors itself into flesh. Pulses of light mimic a heartbeat; waves of energy fold into the patterns of thought. The universe narrows from infinite expanse to a single point of awareness — a being awakening into the human experience.
-
-This is the moment where spirit becomes form, where the cosmic becomes personal, and where existence gains eyes to look back at the stars.
+            Liberation is transforming fear into love...
+using creativity to allow
+our fate to meet our destiny...
+so that our multi-dimensional essence
+can express itself
+as a unique & unified consciousness
+comunning with the Universe in DIVINE AWe
           </p>
         </section>
 
