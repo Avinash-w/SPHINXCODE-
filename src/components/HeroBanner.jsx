@@ -9,7 +9,7 @@ export default function HeroBanner() {
       </video>
 
       {/* Overlay */}
-      <div className="hero-overlay">
+      <div className="hero-overlay" id="sec0">
         <h1 className="hero-title">Awaken Your Inner Consciousness</h1>
         <p className="hero-subtitle">
           Experience Spiritual Alignment, Healing & Universal Energy

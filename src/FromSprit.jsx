@@ -392,7 +392,7 @@ export default function FromSprit() {
       gsap.to(mesh.rotation, {
         z: Math.PI * (i % 2 === 0 ? 2.0 : -1.8),
         scrollTrigger: {
-          trigger: "#sec3",
+          trigger: "#sec1",
           start: "top bottom",
           end: "top top",
           scrub: 1.6,
@@ -404,7 +404,7 @@ export default function FromSprit() {
     // - when user scrolls into sec3, hex grid gently moves forward (z -> -18), rises and rotates.
     // - scrub ties it to the scroll.
     ScrollTrigger.create({
-      trigger: "#sec2",
+      trigger: "personalisedSection",
       start: "top bottom",
       end: "top top",
       scrub: 1.2,

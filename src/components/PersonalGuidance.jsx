@@ -2,7 +2,7 @@ import "../index.css";
 
 export default function PersonalGuidance() {
   return (
-    <section className="personal-guidance-section">
+    <section className="personal-guidance-section" id="personalisedSection">
       {/* Main Heading */}
       <h1 className="guidance-main-title">
         PERSONALIZED GUIDANCE IN SPIRIT CONSCIOUSNESS
