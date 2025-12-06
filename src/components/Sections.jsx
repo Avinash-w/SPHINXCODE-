@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Testimonials from "./Testimonials";
 import CardsSection from "./CardsSection";
+import Green from "../Green";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -159,6 +160,8 @@ useEffect(() => {
           JOIN NEWSLETTER
         </button>
       </section> */}
+
+      <Green/>
       </div>
 
 

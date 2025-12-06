@@ -374,7 +374,7 @@ export default function FromSprit() {
     });
 
     ScrollTrigger.create({
-      trigger: "#sec3",
+      trigger: "#sec2",
       start: "top bottom",
       end: "top top",
       scrub: 2.0,
@@ -404,7 +404,7 @@ export default function FromSprit() {
     // - when user scrolls into sec3, hex grid gently moves forward (z -> -18), rises and rotates.
     // - scrub ties it to the scroll.
     ScrollTrigger.create({
-      trigger: "#sec3",
+      trigger: "#sec2",
       start: "top bottom",
       end: "top top",
       scrub: 1.2,
@@ -431,7 +431,7 @@ export default function FromSprit() {
 
     // Fog parallax update using ScrollTrigger (works even when fogLayers load async)
     ScrollTrigger.create({
-      trigger: '#sec3',
+      trigger: '#sec2',
       start: 'top top',
       end: 'bottom bottom',
       scrub: true,
