@@ -161,7 +161,7 @@ useEffect(() => {
         </button>
       </section> */}
 
-      <Green/>
+    
       </div>
 
 
